@@ -1,0 +1,19 @@
+<!--pages/list/list.wxml-->
+<view class='list-wrapper'>
+  <view class='list-main'>
+    <scroll-view class='list-main-left' scroll-y>
+      <view class='left-main-item' wx:for="{{array}}" wx:key="id">
+        <text>123</text>
+      </view>
+    </scroll-view>
+    <scroll-view class='list-main-right' scroll-y>
+      <view class='right-main-item' wx:for="{{array}}" wx:key="id">
+        <text>1234567</text>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='list-bot'>
+    <image src='../../static/images/github.png' class='list-bot-img'></image>
+    <text class='list-bot-text'>github*</text>
+  </view>
+</view>

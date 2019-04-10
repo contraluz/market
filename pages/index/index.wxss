@@ -1,0 +1,58 @@
+/* pages/list/list.wxss */
+
+page {
+  height: 100%;
+  width: 100%;
+}
+
+.list-wrapper {
+  width: 750rpx;
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+}
+
+.list-main {
+  width: 100%;
+  flex: 1;
+  display: flex;
+}
+
+.left-main-item, .right-main-item {
+  font-size: 40rpx;
+  line-height: 120rpx;
+  color: #666;
+}
+
+.list-main-left {
+  width: 200rpx;
+  background-color: deepskyblue;
+  overflow: auto;
+}
+
+.list-main-right {
+  flex: 1;
+  background-color: darkcyan;
+  overflow: auto;
+}
+
+.list-bot {
+  width: 100%;
+  background-color: pink;
+  height: 120rpx;
+  display: flex;
+}
+
+.list-bot-img {
+  margin: 20rpx;
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.list-bot-text {
+  flex: 1;
+  font-size: 50rpx;
+  color: #242424;
+  line-height: 120rpx;
+}
