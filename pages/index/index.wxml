@@ -2,18 +2,23 @@
 <view class='list-wrapper'>
   <view class='list-main'>
     <scroll-view class='list-main-left' scroll-y>
-      <view class='left-main-item' wx:for="{{array}}" wx:key="id">
-        <text>123</text>
+      <view class='left-main-item center' wx:for="{{array}}" wx:key="id">
+        <text class='center'>{{item.name}}</text>
       </view>
     </scroll-view>
     <scroll-view class='list-main-right' scroll-y>
-      <view class='right-main-item' wx:for="{{array}}" wx:key="id">
-        <text>1234567</text>
+      <view class='right-main-item' wx:for="{{arrayContent}}" wx:key="id">
+        <text class='block center list-right-title'>{{item.name}}</text>
+        <view class='center'>
+          <image src='{{item.url}}' class='iamge-tag' bindtap="imgClick"></image>
+        </view>
+
+        <text class='block list-right-text'>{{item.content}}</text>
       </view>
     </scroll-view>
   </view>
   <view class='list-bot'>
     <image src='../../static/images/github.png' class='list-bot-img'></image>
-    <text class='list-bot-text'>github*</text>
+    <text class='list-bot-text'>github* {{num}}</text>
   </view>
 </view>

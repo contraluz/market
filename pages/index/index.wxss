@@ -1,5 +1,13 @@
 /* pages/list/list.wxss */
 
+.center {
+  text-align: center;
+}
+
+.block {
+  display: block;
+}
+
 page {
   height: 100%;
   width: 100%;
@@ -25,21 +33,41 @@ page {
   color: #666;
 }
 
+.right-main-item {
+  background-color: #f0f0f0;
+  margin: 16rpx 10rpx;
+  padding: 10rpx;
+}
+
+.list-right-text {
+  font-size: 36rpx;
+  line-height: 50rpx;
+  height: 150rpx;
+  overflow: hidden;
+  text-overflow: hidden;
+}
+
+.iamge-tag {
+  width: 180rpx;
+  height: 260rpx;
+  margin: 10rpx;
+}
+
 .list-main-left {
-  width: 200rpx;
-  background-color: deepskyblue;
+  width: 240rpx;
+  background-color: #fff;
   overflow: auto;
 }
 
 .list-main-right {
   flex: 1;
-  background-color: darkcyan;
+  background-color: #fff;
   overflow: auto;
 }
 
 .list-bot {
   width: 100%;
-  background-color: pink;
+  background-color: deepskyblue;
   height: 120rpx;
   display: flex;
 }
