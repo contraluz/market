@@ -2,18 +2,17 @@
 <view class='list-wrapper'>
   <view class='list-main'>
     <scroll-view class='list-main-left' scroll-y>
-      <view class='left-main-item center' wx:for="{{array}}" wx:key="id">
+      <view class='left-main-item center' wx:for="{{array}}" wx:key="item.id">
         <text class='center'>{{item.name}}</text>
       </view>
     </scroll-view>
     <scroll-view class='list-main-right' scroll-y>
-      <view class='right-main-item' wx:for="{{arrayContent}}" wx:key="id">
+      <view class='right-main-item' wx:for="{{arrayContent}}" wx:key="item.id">
         <text class='block center list-right-title'>{{item.name}}</text>
         <view class='center'>
           <image src='{{item.url}}' class='iamge-tag' bindtap="imgClick"></image>
         </view>
-
-        <text class='block list-right-text'>{{item.content}}</text>
+        <text id="{{item.id}}" class='block list-right-text {{item.acitve ? "" : "acitve"}}' bindtap="textClick" data-index="{{item.id}}">{{item.content}}</text>
       </view>
     </scroll-view>
   </view>

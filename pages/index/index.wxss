@@ -8,6 +8,10 @@
   display: block;
 }
 
+.acitve {
+  height: 150rpx;
+}
+
 page {
   height: 100%;
   width: 100%;
@@ -42,7 +46,7 @@ page {
 .list-right-text {
   font-size: 36rpx;
   line-height: 50rpx;
-  height: 150rpx;
+  /* height: 150rpx; */
   overflow: hidden;
   text-overflow: hidden;
 }
