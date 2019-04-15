@@ -7,7 +7,10 @@ Page({
   data: {
     array: [],
     arrayContent: [],
-    num: 0
+    num: 0,
+    animationText: {},
+    animationImg: {},
+    isClose: true
   },
 
   /**
@@ -97,13 +100,33 @@ Page({
   textClick(e) {
     // 点击文字，设置段落打开/折叠
     let arrayContent = this.data.arrayContent
-    if (Array.isArray(arrayContent)) {
+    let isClose = this.data.isClose
+    // if (Array.isArray(arrayContent)) {
       // console.log(e.target)
-      const index = parseInt(e.target.id)
-      arrayContent[index].acitve = !arrayContent[index].acitve
-      this.setData({
-        arrayContent: arrayContent
-      })
-    }
+      // const index = parseInt(e.target.id)
+      // arrayContent[index].acitve = !arrayContent[index].acitve
+      // this.setData({
+      //   arrayContent: arrayContent
+      // })
+    // }
+    
+    // 微信 animation
+    let animationText = wx.createAnimation({
+      duration: 300,
+      timingFunction: 'ease'
+    })
+    let animationImg = wx.createAnimation({
+      duration: 600,
+      timingFunction: 'ease',
+      delay: 300
+    })
+    // console.log(animationText)
+    animationText.height(isClose ? '260rpx' : '150rpx').step()
+    animationImg.height(isClose ? '380rpx' : '260rpx').width(isClose ? '300rpx' : '180rpx').step()
+    this.setData({
+      animationText: animationText.export(),
+      animationImg: animationImg.export(),
+      isClose: !isClose
+    })
   }
 })
